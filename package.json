@@ -1,0 +1,28 @@
+{
+  "name": "swarm-signal-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "moduleResolution": "Node",
+  "dependencies": {
+    "@mattkrick/fast-rtc-swarm": "^0.4.1",
+    "dotenv": "^16.0.1",
+    "graphql-redis-subscriptions": "^2.5.0",
+    "ioredis": "^5.2.2",
+    "ws": "^8.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.5",
+    "@types/ws": "^8.5.3",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "start": "nodemon -e ts -w ./src -x npm run watch:serve",
+    "watch:serve": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
+    "start1": "dotenv -e .env node --loader ./node_modules/ts-node-esm src/index.ts"
+  }
+}
