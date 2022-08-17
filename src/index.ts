@@ -12,8 +12,8 @@ const wss: any = new WebSocketServer({ port: PORT })
 wss.on('connection', (connection: any) => {
   connection.on('message', (message: any) => {
     const parsedMessage = JSON.parse(message)
-    if (validateInit(wss as UWebSocket, parsedMessage)) {
-      handleSignal(wss as UWebSocket, parsedMessage)
+    if (validateInit(connection as UWebSocket, parsedMessage)) {
+      handleSignal(connection as UWebSocket, parsedMessage)
     }
   })
 })
