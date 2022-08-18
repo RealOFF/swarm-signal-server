@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "CommonJS",
     "esModuleInterop": true,
     "target": "ESNext",
     "moduleResolution": "Node",
@@ -11,12 +11,10 @@
     "strict": true,
     "noImplicitAny": true,
     "useUnknownInCatchVariables": false,
-    "inlineSourceMap": true
+    "inlineSourceMap": true,
+    "skipLibCheck": true
   },
   "ts-node": {
     "esm": true
-  },
-  "lib": [
-    "esnext"
-  ]
+  }
 }
