@@ -21,8 +21,7 @@
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "start": "nodemon -e ts -w ./src -x npm run watch:serve",
-    "watch:serve": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
-    "start1": "dotenv -e .env node --loader ./node_modules/ts-node-esm src/index.ts"
+    "watch": "nodemon -e ts -w ./src -x npm run start",
+    "start": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts"
   }
 }
