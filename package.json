@@ -22,6 +22,6 @@
   },
   "scripts": {
     "watch": "nodemon -e ts -w ./src -x npm run start",
-    "start": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts"
+    "start": "node --experimental-specifier-resolution=node --loader ./node_modules/ts-node/esm src/index.ts"
   }
 }
