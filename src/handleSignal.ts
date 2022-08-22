@@ -36,6 +36,7 @@ const handleSignal = (ws: UWebSocket, payload: Payload) => {
   const handler = handlers[type]
   if (handler && ws.context) {
     handler(ws, payload)
+    console.log(`Method "${type}" was called`)
   }
 }
 

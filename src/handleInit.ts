@@ -16,7 +16,6 @@ const handleInit = (ws: UWebSocket, payload: InitSignal) => {
   const { userId, roomId } = payload
 
   // exit if a duplicate init payload is sent or not authorized
-  console.log(ws.context, userId)
   if (ws.context.userId) return
   ws.context.userId = userId
   const ps = getPubSub()
